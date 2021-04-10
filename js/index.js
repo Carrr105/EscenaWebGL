@@ -20,7 +20,9 @@ function initWebGL(canvas) {
       // Tratar de tomar el contexto estandar. Si falla, retornar al experimental.
       gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
     }
-    catch(e) {}
+    catch(e) {
+        
+    }
   
     if (!gl) {
       alert("Tu navegador no soporta WebGL.");
