@@ -26,7 +26,8 @@ function initWebGL(canvas) {
     }
   
     if (!gl) {
-      alert("Tu navegador no soporta WebGL.");
+    paragraph.innerHTML = "Failed to get WebGL context. " 
+    + "Your browser or device may not support WebGL.";
       gl = null;
     }
     else{
