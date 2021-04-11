@@ -15,6 +15,8 @@ function start() {
 
 function initWebGL(canvas) {
     gl = null;
+    var paragraph = document.querySelector("p"),
+    canvas = document.querySelector("canvas");
   
     try {
       gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
@@ -26,6 +28,9 @@ function initWebGL(canvas) {
     if (!gl) {
       alert("Tu navegador no soporta WebGL.");
       gl = null;
+    }
+    else{
+    paragraph.innerHTML = "Congratulations! Your browser supports WebGL. ";
     }
 
     return gl;
